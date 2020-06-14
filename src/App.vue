@@ -51,7 +51,7 @@ export default class App extends Vue {
   kindergardens = [];
 
   protected async created() {
-    const url = "/data.json";
+    const url = "./data.json";
     const result = await axios.get(`${url}`);
     this.kindergardens = result.data.map((x: HttpResponse) => {
       return {
